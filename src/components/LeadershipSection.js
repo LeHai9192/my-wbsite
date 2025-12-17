@@ -4,9 +4,9 @@ import LeaderCard from './LeaderCard';
 const LeadershipSection = () => {
   const leaders = [
     { 
-      name: "Le Van Hai", 
+      name: "LE Van Hai", 
       position: "最高経営責任者",
-      description: "10年以上のソフトウェア開発経験を持つエンジニア",
+      description: "15年以上のソフトウェア開発経験を持つエンジニア出身のCEO",
       image: "/avata/hai.jpg"
     },
     { 
