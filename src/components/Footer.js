@@ -24,7 +24,7 @@ const Footer = () => {
             <div className="space-y-2">
               <div className="flex items-center text-gray-300 text-sm">
                 <MapPin className="w-4 h-4 mr-2 text-blue-400" />
-                <span>〒100-0001 東京都千代田区千代田1-1-1</span>
+                <span>308号室、3階、オフィスビル、Vinhomes West Point、Do Duc Duc通り、<br></br>Tu Liem区、ハノイ</span>
               </div>
               <div className="flex items-center text-gray-300 text-sm">
                 <Phone className="w-4 h-4 mr-2 text-blue-400" />
@@ -32,7 +32,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center text-gray-300 text-sm">
                 <Mail className="w-4 h-4 mr-2 text-blue-400" />
-                <span>info@codebridge.com.vn</span>
+                <span>info@codebridge.vn</span>
               </div>
             </div>
           </div>
@@ -72,18 +72,18 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-medium mb-4">サービス</h3>
             <div className="space-y-2">
-              <a href="#" className="block text-gray-300 hover:text-white text-sm transition-colors">
-                ソフトウェア開発
-              </a>
-              <a href="#" className="block text-gray-300 hover:text-white text-sm transition-colors">
+              <button type="button" className="block text-gray-300 hover:text-white text-sm transition-colors">
+              ソフトウェア開発
+              </button>
+            <button type="button" className="block text-gray-300 hover:text-white text-sm transition-colors">
                 モバイルアプリ開発
-              </a>
-              <a href="#" className="block text-gray-300 hover:text-white text-sm transition-colors">
+              </button>
+               <button type="button"className="block text-gray-300 hover:text-white text-sm transition-colors">
                 クラウドソリューション
-              </a>
-              <a href="#" className="block text-gray-300 hover:text-white text-sm transition-colors">
+              </button>
+              <button type="button"className="block text-gray-300 hover:text-white text-sm transition-colors">
                 データベース設計
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -108,14 +108,8 @@ const Footer = () => {
             
             <div className="text-center md:text-right">
               <p className="text-gray-400 text-xs mb-2">
-                © 2024 Code Bridge. All rights reserved.
+                © 2025 Code Bridge. All rights reserved.
               </p>
-              <button 
-                onClick={scrollToTop}
-                className="text-blue-400 hover:text-blue-300 text-xs transition-colors"
-              >
-                トップに戻る ↑
-              </button>
             </div>
           </div>
         </div>
