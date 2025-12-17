@@ -10,7 +10,7 @@ const PortfolioSection = () => {
       domain: "Telecommunications",
       service: "Mobile Network Solution",
       collaboration: "Full Development",
-      image: "/portfolio/VMO.png"
+      image: "/portfolio2/VMO.png"
     },
     {
       title: "AI Box",
@@ -19,7 +19,7 @@ const PortfolioSection = () => {
       domain: "IoT & Security",
       service: "AI Camera System",
       collaboration: "Hardware & Software",
-      image: "/portfolio/aibox.jpg"
+      image: "/portfolio2/aibox.jpg"
     },
     {
       title: "Chatbot",
@@ -28,7 +28,7 @@ const PortfolioSection = () => {
       domain: "Customer Service",
       service: "AI Chatbot Platform",
       collaboration: "AI Development",
-      image: "/portfolio/chatbot.jpg"
+      image: "/portfolio2/chatbot.jpg"
     }
   ];
 
