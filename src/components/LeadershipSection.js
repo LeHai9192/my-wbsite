@@ -10,7 +10,7 @@ const LeadershipSection = () => {
       image: "/avata/hai.jpg"
     },
     { 
-      name: "NGuyen Xuan Chien", 
+      name: "Nguyen Xuan Chien", 
       position: "最高プロダクト責任者",
       description: "プロダクト戦略とユーザーエクスペリエンスの専門家",
       image: "/avata/Chien.jpg"
