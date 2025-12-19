@@ -10,24 +10,24 @@ const PartnersSection = () => {
     { name: "TERACOM", type: "Infrastructure Partner", image: "/partner2/teracom.png", scale: "large"  }
   ];
 
-  return (
+ return (
     <section className="py-16 bg-blue-700 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-normal text-center mb-12 fade-in">関連会社パートナー</h2>
         
-        <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 md:gap-4 mb-12">
           {partners.map((partner, index) => (
             <div 
               key={index} 
-              className="bg-white rounded-lg p-4 flex items-center justify-center fade-in hover:shadow-xl transition-all duration-300 hover:transform hover:-translate-y-1 h-20"
+              className="bg-white rounded-lg p-4 md:p-4 flex items-center justify-center fade-in hover:shadow-xl transition-all duration-300 hover:transform hover:-translate-y-1 h-16 md:h-20 overflow-hidden"
             >
               {/* Partner Logo */}
               <img
                 src={partner.image}
                 alt={partner.name}
                 className={`max-w-full max-h-full object-contain ${
-                  partner.scale === 'xlarge' ? 'scale-[2]' : 
-                  partner.scale === 'large' ? 'scale-150' : ''
+                  partner.scale === 'xlarge' ? 'scale-[1.8] md:scale-[2]' : 
+                  partner.scale === 'large' ? 'scale-[1.3] md:scale-150' : 'scale-90'
                 }`}
                 onError={(e) => {
                   e.currentTarget.style.display = "none";
@@ -40,11 +40,6 @@ const PartnersSection = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="mt-12 text-center fade-in">
-          <p className="text-blue-100 text-sm">
-          </p>
         </div>
       </div>
     </section>
