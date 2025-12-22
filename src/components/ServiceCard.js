@@ -1,5 +1,4 @@
 import React from 'react';
-import { User } from 'lucide-react';
 
 const ServiceCard = ({ icon, title, description, image }) => {
   return (

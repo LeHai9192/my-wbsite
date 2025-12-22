@@ -21,7 +21,7 @@ const NewsSection = () => {
     <section id="news" className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 fade-in">
-          <h2 className="text-3xl font-normal text-gray-800 mb-4"></h2>
+          <h2 className="text-3xl font-normal text-gray-800 mb-4">ニュース</h2>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
