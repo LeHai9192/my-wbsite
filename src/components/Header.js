@@ -24,15 +24,25 @@ const Header = ({ isScrolled }) => {
     }`}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <div className="text-xl font-bold text-blue-700">Code Bridge</div>
+          <div className="flex flex-col items-center space-y-1 cursor-pointer" onClick={() => scrollToSection('home')}>
+            <img 
+              src="/logo.svg" 
+              alt="Code Bridge Logo" 
+              className="h-8 w-auto"
+              onError={(e) => {
+                e.currentTarget.style.display = 'none';
+              }}
+            />
+            <span className="text-xl font-bold text-blue-700">Code Bridge</span>
+          </div>
           
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-6 lg:space-x-8">
             {navItems.map(item => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-gray-700 hover:text-blue-700 transition-colors text-sm"
+                className="text-gray-700 hover:text-blue-700 transition-colors text-base lg:text-lg font-medium"
               >
                 {item.label}
               </button>
@@ -62,12 +72,12 @@ const Header = ({ isScrolled }) => {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-gray-700 hover:text-blue-700 transition-colors text-sm text-left"
+                  className="text-gray-700 hover:text-blue-700 transition-colors text-base font-medium text-left"
                 >
                   {item.label}
                 </button>
               ))}
-              <button className="bg-blue-700 text-white px-4 py-2 rounded text-sm hover:bg-blue-800 transition-colors w-fit">
+              <button className="bg-blue-700 text-white px-4 py-2 rounded text-base hover:bg-blue-800 transition-colors w-fit">
                 日本語
               </button>
             </nav>

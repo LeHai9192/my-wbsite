@@ -15,10 +15,27 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Company Info */}
         <div className="mb-8">
-          <h3 className="text-2xl font-bold text-blue-400 mb-4">Code Bridge</h3>
-          <p className="text-gray-300 mb-6 text-sm leading-relaxed">
-            ベトナムの最先端のソフトウェア開発会社として、革新的なテクノロジーソリューションを通じて、お客様のビジネスの成長を支援します。
-          </p>
+          <div className="relative flex flex-col md:flex-row md:items-center mb-4">
+            <div className="flex flex-col items-start space-y-2 mb-4 md:mb-0 md:flex-shrink-0">
+              <img 
+                src="/logo.svg" 
+                alt="Code Bridge Logo" 
+                className="h-10 w-auto"
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none';
+                }}
+              />
+              <h3 className="text-2xl font-bold text-blue-400">Code Bridge</h3>
+            </div>
+            <div className="flex flex-col w-full md:ml-8 md:max-w-2xl md:w-auto md:mt-6">
+              <p className="text-gray-300 text-sm leading-relaxed text-left">
+                日本市場向けのベトナムフリーランス開発チームとして、柔軟で高品質なITソリューションを提供。
+              </p>
+              <p className="text-gray-300 text-sm leading-relaxed text-left mt-1">
+                プロジェクト単位から長期契約まで、お客様のニーズに合わせたサービスを提供します。
+              </p>
+            </div>
+          </div>
           
           <div className="space-y-3 text-sm">
             <div className="flex items-start">

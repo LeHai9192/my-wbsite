@@ -25,7 +25,7 @@ const ContactForm = () => {
 
   return (
     <div className="bg-white p-8 rounded-lg fade-in">
-      <h4 className="text-blue-700 text-xl font-medium mb-6">お問い合わせフォーム</h4>
+      <h4 className="text-blue-700 text-2xl font-bold mb-6">お問い合わせフォーム</h4>
       <form onSubmit={handleSubmit} className="space-y-6">
         <input
           type="text"
