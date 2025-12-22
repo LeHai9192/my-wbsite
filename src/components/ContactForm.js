@@ -10,6 +10,7 @@ const ContactForm = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState({ type: '', message: '' });
+  const [errors, setErrors] = useState({});
 
   // EmailJS configuration
   const EMAILJS_SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID || 'service_7voaaid';
@@ -22,12 +23,47 @@ const ContactForm = () => {
       ...prev,
       [name]: value
     }));
+    // Xóa lỗi khi user bắt đầu nhập
+    if (errors[name]) {
+      setErrors(prev => {
+        const newErrors = { ...prev };
+        delete newErrors[name];
+        return newErrors;
+      });
+    }
+  };
+
+  const validateForm = () => {
+    const newErrors = {};
+    
+    if (!formData.name.trim()) {
+      newErrors.name = 'お名前を入力してください。';
+    }
+    
+    if (!formData.email.trim()) {
+      newErrors.email = 'メールアドレスを入力してください。';
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = '有効なメールアドレスを入力してください。';
+    }
+    
+    if (!formData.message.trim()) {
+      newErrors.message = 'お問い合わせ内容を入力してください。';
+    }
+    
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    if (!validateForm()) {
+      return;
+    }
+    
     setIsSubmitting(true);
     setSubmitStatus({ type: '', message: '' });
+    setErrors({});
 
     try {
       // Gửi email qua EmailJS
@@ -108,41 +144,64 @@ const ContactForm = () => {
     <div className="bg-white p-8 rounded-lg fade-in">
       <h4 className="text-blue-700 text-2xl font-bold mb-6">お問い合わせフォーム</h4>
       <form onSubmit={handleSubmit} className="space-y-6">
-        <input
-          type="text"
-          name="name"
-          value={formData.name}
-          onChange={handleInputChange}
-          placeholder="お名前 *"
-          className="w-full p-3 border border-gray-300 rounded text-gray-800 text-sm"
-          required
-        />
-        <input
-          type="email"
-          name="email"
-          value={formData.email}
-          onChange={handleInputChange}
-          placeholder="メールアドレス *"
-          className="w-full p-3 border border-gray-300 rounded text-gray-800 text-sm"
-          required
-        />
-        <input
-          type="text"
-          name="company"
-          value={formData.company}
-          onChange={handleInputChange}
-          placeholder="会社名"
-          className="w-full p-3 border border-gray-300 rounded text-gray-800 text-sm"
-        />
-        <textarea
-          name="message"
-          value={formData.message}
-          onChange={handleInputChange}
-          placeholder="お問い合わせ内容 *"
-          rows={4}
-          className="w-full p-3 border border-gray-300 rounded text-gray-800 text-sm resize-vertical"
-          required
-        />
+        <div>
+          <input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleInputChange}
+            placeholder="お名前 *"
+            className={`w-full p-3 border rounded text-gray-800 text-sm ${
+              errors.name ? 'border-red-500' : 'border-gray-300'
+            }`}
+          />
+          {errors.name && (
+            <p className="mt-1 text-sm text-red-600 text-left">{errors.name}</p>
+          )}
+        </div>
+        
+        <div>
+          <input
+            type="text"
+            name="email"
+            value={formData.email}
+            onChange={handleInputChange}
+            placeholder="メールアドレス *"
+            className={`w-full p-3 border rounded text-gray-800 text-sm ${
+              errors.email ? 'border-red-500' : 'border-gray-300'
+            }`}
+          />
+          {errors.email && (
+            <p className="mt-1 text-sm text-red-600 text-left">{errors.email}</p>
+          )}
+        </div>
+        
+        <div>
+          <input
+            type="text"
+            name="company"
+            value={formData.company}
+            onChange={handleInputChange}
+            placeholder="会社名"
+            className="w-full p-3 border border-gray-300 rounded text-gray-800 text-sm"
+          />
+        </div>
+        
+        <div>
+          <textarea
+            name="message"
+            value={formData.message}
+            onChange={handleInputChange}
+            placeholder="お問い合わせ内容 *"
+            rows={4}
+            className={`w-full p-3 border rounded text-gray-800 text-sm resize-vertical ${
+              errors.message ? 'border-red-500' : 'border-gray-300'
+            }`}
+          />
+          {errors.message && (
+            <p className="mt-1 text-sm text-red-600 text-left">{errors.message}</p>
+          )}
+        </div>
         <button
           type="submit"
           disabled={isSubmitting}
@@ -156,7 +215,7 @@ const ContactForm = () => {
         </button>
         
         {submitStatus.message && (
-          <div className={`mt-4 p-3 rounded text-sm ${
+          <div className={`mt-4 p-3 rounded text-sm text-left ${
             submitStatus.type === 'success' 
               ? 'bg-green-100 text-green-700 border border-green-300' 
               : 'bg-red-100 text-red-700 border border-red-300'

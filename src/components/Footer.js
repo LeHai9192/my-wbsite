@@ -41,7 +41,7 @@ const Footer = () => {
             <div className="flex items-start">
               <MapPin className="w-4 h-4 mr-3 mt-1 flex-shrink-0 text-blue-400" />
               <span className="text-gray-300">
-                308号室、3階、オフィスビル、Vinhomes West Point、De Duc Chinh通り、Tu Liem区、ハノイ
+                308号室、3階、オフィスビル、Vinhomes West Point、Do Duc Duc通り、Tu Liem区、ハノイ
               </span>
             </div>
             
