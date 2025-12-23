@@ -2,12 +2,12 @@ import React from 'react';
 
 const PartnersSection = () => {
   const partners = [
-    { name: "ASTEC", type: "Technology Partner", image: "/partner2/astec.jpg" , scale: "normal" },
-    { name: "Sun*", type: "Development Partner", image: "/partner2/sun.png" , scale: "normal" },
-    { name: "E-COMETRUE", type: "Business Partner", image: "/partner2/ecometrue.jpg", scale: "large" },
-    { name: "HAUDI", type: "Innovation Partner", image: "/partner2/haudi.jpg", scale: "large" },
-    { name: "MUMESOFT", type: "Creative Partner", image: "/partner2/mume.jpg", scale: "large"  },
-    { name: "TERACOM", type: "Infrastructure Partner", image: "/partner2/teracom.png", scale: "large"  }
+    { name: "ASTEC", type: "Technology Partner", image: `${process.env.PUBLIC_URL || ''}/partner2/astec.jpg` , scale: "normal" },
+    { name: "Sun*", type: "Development Partner", image: `${process.env.PUBLIC_URL || ''}/partner2/sun.png` , scale: "normal" },
+    { name: "E-COMETRUE", type: "Business Partner", image: `${process.env.PUBLIC_URL || ''}/partner2/ecometrue.jpg`, scale: "large" },
+    { name: "HAUDI", type: "Innovation Partner", image: `${process.env.PUBLIC_URL || ''}/partner2/haudi.jpg`, scale: "large" },
+    { name: "MUMESOFT", type: "Creative Partner", image: `${process.env.PUBLIC_URL || ''}/partner2/mume.jpg`, scale: "large"  },
+    { name: "TERACOM", type: "Infrastructure Partner", image: `${process.env.PUBLIC_URL || ''}/partner2/teracom.png`, scale: "large"  }
   ];
 
  return (

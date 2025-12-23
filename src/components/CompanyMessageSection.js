@@ -2,7 +2,7 @@ import React from 'react';
 import { User } from 'lucide-react';
 
 const CompanyMessageSection = () => {
-  const companyImage = "/company/vision.png";
+  const companyImage = `${process.env.PUBLIC_URL || ''}/company/vision.png`;
 
   return (
     <section

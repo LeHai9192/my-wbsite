@@ -11,42 +11,42 @@ const AdvantagesSection = () => {
     { 
       icon: <Award className="w-6 h-6" />, 
       title: "銀行業",
-      image: "/advantages/banking.png"
+      image: `${process.env.PUBLIC_URL || ''}/advantages/banking.png`
     },
     { 
       icon: <Clock className="w-6 h-6" />, 
       title: "物流",
-      image: "/advantages/logistics.png"
+      image: `${process.env.PUBLIC_URL || ''}/advantages/logistics.png`
     },
     { 
       icon: <DollarSign className="w-6 h-6" />, 
       title: "通信",
-      image: "/advantages/telecom.png"
+      image: `${process.env.PUBLIC_URL || ''}/advantages/telecom.png`
     },
     { 
       icon: <Shield className="w-6 h-6" />, 
       title: "保険",
-      image: "/advantages/insurance.png"
+      image: `${process.env.PUBLIC_URL || ''}/advantages/insurance.png`
     },
     { 
       icon: <Headphones className="w-6 h-6" />, 
       title: "金融",
-      image: "/advantages/finance.png"
+      image: `${process.env.PUBLIC_URL || ''}/advantages/finance.png`
     },
     { 
       icon: <Headphones className="w-6 h-6" />, 
       title: "医療",
-      image: "/advantages/medical.png"
+      image: `${process.env.PUBLIC_URL || ''}/advantages/medical.png`
     },
     { 
       icon: <Headphones className="w-6 h-6" />, 
       title: "教育",
-      image: "/advantages/education.png"
+      image: `${process.env.PUBLIC_URL || ''}/advantages/education.png`
     },
     { 
       icon: <Headphones className="w-6 h-6" />, 
       title: "電子商取引",
-      image: "/advantages/ecommerce.png"
+      image: `${process.env.PUBLIC_URL || ''}/advantages/ecommerce.png`
     },
   ];
 
