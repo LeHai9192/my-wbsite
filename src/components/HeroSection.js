@@ -5,13 +5,13 @@ const HeroSection = () => {
 
   const slides = [
     {
-      image: '/service/1.png'
+      image: `${process.env.PUBLIC_URL || ''}/service/1.png`
     },
     {
-      image: '/service/2.png'
+      image: `${process.env.PUBLIC_URL || ''}/service/2.png`
     },
     {
-      image: '/service/3.png'
+      image: `${process.env.PUBLIC_URL || ''}/service/3.png`
     }
   ];
 

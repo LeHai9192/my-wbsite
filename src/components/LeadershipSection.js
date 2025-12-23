@@ -7,19 +7,19 @@ const LeadershipSection = () => {
       name: "Le Van Hai", 
       position: "最高経営責任者",
       description: "10年以上のソフトウェア開発経験を持つエンジニア",
-      image: "/avata/hai.jpg"
+      image: `${process.env.PUBLIC_URL || ''}/avata/hai.jpg`
     },
     { 
       name: "Nguyen Xuan Chien", 
       position: "最高プロダクト責任者",
       description: "プロダクト戦略とユーザーエクスペリエンスの専門家",
-      image: "/avata/Chien.jpg"
+      image: `${process.env.PUBLIC_URL || ''}/avata/Chien.jpg`
     },
     { 
       name: "Nguyen Van Thanh", 
       position: "最高技術責任者",
       description: "大規模システム設計とアーキテクチャの第一人者",
-      image: "/avata/thanh.png"
+      image: `${process.env.PUBLIC_URL || ''}/avata/thanh.png`
     }
   ];
 

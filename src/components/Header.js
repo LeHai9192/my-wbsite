@@ -11,7 +11,7 @@ const Header = ({ isScrolled }) => {
 
   const navItems = [
     { label: "ホーム", id: "home" },
-    { label: "サービスsdsdssd", id: "services" },
+    { label: "サービス", id: "services" },
     { label: "会社概要", id: "about" },
     { label: "実績", id: "portfolio" },
     { label: "ニュース", id: "news" },
@@ -26,7 +26,7 @@ const Header = ({ isScrolled }) => {
         <div className="flex justify-between items-center py-4">
           <div className="flex flex-col items-center space-y-1 cursor-pointer" onClick={() => scrollToSection('home')}>
             <img 
-              src="/logo.svg" 
+              src={`${process.env.PUBLIC_URL || ''}/logo.svg`}
               alt="Code Bridge Logo" 
               className="h-8 w-auto"
               onError={(e) => {

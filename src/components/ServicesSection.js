@@ -8,27 +8,27 @@ const ServicesSection = () => {
       icon: <Laptop className="w-8 h-8" />,
       title: "ソフトウェア開発",
       description: "最新技術を活用したカスタムソフトウェアの設計・開発を行います。",
-      image: "/service/1.png"
+      image: `${process.env.PUBLIC_URL || ''}/service/1.png`
 
     },
     {
       icon: <Smartphone className="w-8 h-8" />,
       title: "モバイルアプリ開発", 
       description: "iOS・Android対応のモバイルアプリケーション開発サービス。",
-      image: "/service/2.png"
+      image: `${process.env.PUBLIC_URL || ''}/service/2.png`
 
     },
     {
       icon: <Cloud className="w-8 h-8" />,
       title: "クラウドソリューション",
       description: "AWS、Azure、GCPを活用したクラウドインフラ構築。",
-      image: "/service/3.png"
+      image: `${process.env.PUBLIC_URL || ''}/service/3.png`
     },
     {
       icon: <Database className="w-8 h-8" />,
       title: "データベース設計",
       description: "効率的なデータベース設計と最適化サービス。",
-      image: "/service/4.png"
+      image: `${process.env.PUBLIC_URL || ''}/service/4.png`
     }
   ];
 
