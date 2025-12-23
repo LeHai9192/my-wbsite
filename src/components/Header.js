@@ -11,7 +11,7 @@ const Header = ({ isScrolled }) => {
 
   const navItems = [
     { label: "ホーム", id: "home" },
-    { label: "サービス", id: "services" },
+    { label: "サービスsdsdssd", id: "services" },
     { label: "会社概要", id: "about" },
     { label: "実績", id: "portfolio" },
     { label: "ニュース", id: "news" },
